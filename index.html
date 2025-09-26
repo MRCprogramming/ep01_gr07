@@ -1,68 +1,129 @@
 <!DOCTYPE html>
-<html lang = "es">
+<html lang="es">
 <head>
-    <meta charset = "UTF-8">
-    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
-    <title>Viajes Inolvidables</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viajes Inolvidables</title>
 
-    <link rel = "stylesheet" href = "style.css">
-
-    <style>
-        body { font-family: Arial, sans-serif; margin: 10px; background: rgb(211, 211, 211); }
-        .header { background: #f7f7f7; padding: 10px; border: 1px solid #f7f7f7; }
-        .logo { font-weight: bold; }
-    </style>
+  <!-- Enlace al CSS externo -->
+  <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
-    <h1><strong>Viajes Inolvidables</strong></h1>
-    <div class = "cabecera apariencia">
-        <div class = "logo"><strong>Viajes Inolvidables</strong></div>
-        <div class = "nav">
-            <a href = "#">Inicio</a>
-            <a href = "#">Experiencias</a>
-            <a href = "#">Foro</a>
-            <a href = "#">Contacto</a>
+  <!-- CABECERA -->
+  <header class="header">
+    <div class="logo">✈️ Viajes Inolvidables</div>
+    <nav class="nav">
+      <a href="index.html" aria-current="page">Inicio</a>
+      <a href="#experiencias">Experiencias</a>
+      <a href="#foro">Foro</a>
+      <a href="#contacto">Contacto</a>
+      <a href="registro.html">Registro</a>
+    </nav>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="layout">
+
+    <!-- Columna principal -->
+    <section class="main">
+
+      <!-- Banner -->
+      <section class="banner">
+        <h1>Descubre el mundo con nosotros</h1>
+        <p>Viaja ligero, comparte experiencias y vive aventuras inolvidables.</p>
+      </section>
+
+      <!-- Pack destacado -->
+      <section class="card">
+        <h2>Pack Sudeste Asiático</h2>
+        <img src="images/katmandu.jpg" alt="Pack Sudeste Asiático">
+        <p>Incluye Vietnam &amp; Camboya: buses, hostales y guía de visados.</p>
+        <div class="row">
+          <span class="price">€600</span>
+          <a class="btn" href="compra.html">Comprar</a>
         </div>
-    </div>
+      </section>
 
-    <div class="container">
+      <!-- Experiencias -->
+      <section id="experiencias" class="card">
+        <h3>Experiencias de la comunidad</h3>
+        <div class="grid">
 
-        <main class="main">
-          <div class="card">
-            <h2>Pack Sudeste Asiático - €600</h2> 
-            <p>Vietnam & Camboya: buses, hostales y guía de visados</p>
-            <button id="buy">Comprar</button>
+          <div class="item card">
+            <img src="images/katmandu.jpg" alt="Hostal Katmandú">
+            <p>Hostal en Katmandú</p>
+            <a class="btn small" href="registro.html">Ver más</a>
+            <button class="like">♡</button>
           </div>
-    
-          <div class="card">
-            <h3>Experiencias de la comunidad</h3>
-            <div class="grid">
-              <div class="item card">
-                github <img src="/Users/darksergio05/Desktop/UC3M-Colmenarejo/3º año/Interfaces de usuario/Práctica 1/ep01_gr07/ej/holiday-inn-resort-kathmandu-9854821879-4x3.jpeg" alt="Hostal Katmandú">
-                <p>Hostal en Katmandú</p>
-                <button class="like">♡</button>
-                </div>
-    
-              <div class="item card">
-                <img src="https://via.placeholder.com/150" alt="Sudamérica en bus">
-                <p>Sudamérica en bus</p>
-                <button class="like">♡</button>
-              </div>
-    
-              <div class="item card">
-                <img src="https://via.placeholder.com/150" alt="Visado India">
-                <p>Visado para India</p>
-                <button class="like">♡</button>
-              </div>
-    
-            </div>
+
+          <div class="item card">
+            <img src="images/sudamerica.jpg" alt="Sudamérica en bus">
+            <p>Sudamérica en bus</p>
+            <a class="btn small" href="registro.html">Ver más</a>
+            <button class="like">♡</button>
           </div>
-        </main>
-<main>
-    <footer style = "text-align:center; margin-top: 10px;">
-        © 2025 Viajes Inolvidables
-    </footer>
-</main>
+
+          <div class="item card">
+            <img src="images/india.jpg" alt="Visado India">
+            <p>Visado para India</p>
+            <a class="btn small" href="registro.html">Ver más</a>
+            <button class="like">♡</button>
+          </div>
+
+        </div>
+      </section>
+    </section>
+
+    <!-- Barra lateral -->
+    <aside class="sidebar">
+      <section class="card login">
+        <h3>Acceso</h3>
+        <label>Usuario
+          <input type="text" placeholder="usuario@example.com">
+        </label>
+        <label>Contraseña
+          <input type="password" placeholder="********">
+        </label>
+        <div class="row">
+          <a class="btn" href="logged.html">Iniciar sesión</a>
+          <a class="btn outline" href="registro.html">Registro</a>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>Top destinos</h3>
+        <ul>
+          <li>Tailandia</li>
+          <li>Perú</li>
+          <li>Nepal</li>
+        </ul>
+      </section>
+
+      <section class="card" id="consejos">
+        <h3>Consejos rápidos</h3>
+        <ul>
+          <li>Lleva seguro médico</li>
+          <li>Infórmate sobre visados</li>
+          <li>Viaja ligero</li>
+        </ul>
+      </section>
+    </aside>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="footer">
+    <p>© 2025 Viajes Inolvidables · <a href="#">Política de privacidad</a></p>
+  </footer>
+
+  <!-- Script para los corazones -->
+  <script>
+    document.querySelectorAll('.like').forEach(function(btn){
+      btn.addEventListener('click', function(){
+        btn.textContent = btn.textContent.trim() === '♡' ? '♥' : '♡';
+      });
+    });
+  </script>
+
 </body>
 </html>
