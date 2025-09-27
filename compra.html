@@ -1,14 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=devide-width, initial-scale=1.0">
-        <title>Compra</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comprar pack · Mochileros Sin Fronteras</title>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
 
-        <!-- Enlace externo al documento de colores CSS -->
-        <link rel="stylesheet" href="style/style.css"> 
-        <link rel="icon" href="images/holiday-inn-resort-kathmandu-9854821879-4x3.jpeg">
-        <script src="js/compra.js" defer></script> <!--Esto no se que es hasta ahora, lo dejamos para luego-->
-    </head>
-        
+  <header class="site-header small">
+    <h1 class="brand"><a href="index.html">Mochileros Sin Fronteras</a></h1>
+  </header>
+
+  <main class="centered two-col">
+    <section class="card">
+      <h2>Pack seleccionado</h2>
+      <img src="images/pack1.jpg" alt="Pack seleccionado" style="max-width:100%">
+      <h3 id="pack-title">Pack Sudeste Asiático</h3>
+      <p>Vietnam & Camboya — rutas en bus y alojamiento económico.</p>
+      <div class="price">€600</div>
+    </section>
+
+    <section class="card">
+      <h2>Formulario de compra</h2>
+      <form id="buy-form" onsubmit="return false;">
+        <label>Nombre
+          <input type="text" required>
+        </label>
+
+        <label>Correo electrónico
+          <input type="email" required>
+        </label>
+
+        <label>Tipo de tarjeta
+          <select required>
+            <option>Visa</option><option>Mastercard</option><option>American Express</option>
+          </select>
+        </label>
+
+        <label>Número de tarjeta
+          <input inputmode="numeric" maxlength="19" placeholder="1234 5678 9012 3456" required>
+        </label>
+
+        <label>Nombre del titular
+          <input type="text" required>
+        </label>
+
+        <label>Fecha caducidad
+          <input type="month" required>
+        </label>
+
+        <label>CVV
+          <input inputmode="numeric" maxlength="4" required>
+        </label>
+
+        <div class="row">
+          <button class="btn" id="do-buy">Comprar</button>
+          <button class="btn outline" id="clear">Borrar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    // JS mínimo: limpiar formulario
+    document.getElementById('clear').addEventListener('click', function(e){
+      e.preventDefault();
+      document.getElementById('buy-form').reset();
+    });
+
+    document.getElementById('do-buy').addEventListener('click', function(e){
+      e.preventDefault();
+      alert('Gracias por su compra (demo).');
+      location.href = 'index.html';
+    });
+  </script>
+
+</body>
 </html>
