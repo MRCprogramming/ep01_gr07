@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Viajes Inolvidables</title>
 
-  <!-- Enlace al CSS externo -->
+  <!-- Enlace al documento externo de colores CSS -->
   <link rel="stylesheet" href="style/style.css">
 </head>
 
@@ -22,7 +22,7 @@
     </nav>
   </header>
 
-  <!-- CONTENIDO PRINCIPAL -->
+  <!-- Estructura de la página principal-->
   <main class="layout">
 
     <!-- Columna principal -->
@@ -31,22 +31,25 @@
       <!-- Banner -->
       <section class="banner">
         <h1>Descubre el mundo con nosotros</h1>
-        <p>Viaja ligero, comparte experiencias y vive aventuras inolvidables.</p>
+        <p>Viaja, experiencias con los que mas quieres y vive aventuras inolvidables</p>
+        <p>Descubre más deslizando por esta página</p>
       </section>
 
       <!-- Pack destacado -->
-      <section class="card">
-        <h2>Pack Sudeste Asiático</h2>
-        <img src="images/katmandu.jpg" alt="Pack Sudeste Asiático">
-        <p>Incluye Vietnam &amp; Camboya: buses, hostales y guía de visados.</p>
-        <div class="row">
-          <span class="price">€600</span>
-          <a class="btn" href="compra.html">Comprar</a>
+      <section class="pack1">
+        <div class="overlay">
+          <h2>Pack Sudeste Asiático</h2>
+          <p>Vietnam &amp; Camboya: buses, hostales y guía de visados</p>
+          <div class="row">
+            <span class="price">€600</span>
+            <a class="btn" href="compra.html">Comprar</a>
+          </div>
         </div>
       </section>
+      
 
       <!-- Experiencias -->
-      <section id="experiencias" class="card">
+      <section id="experiencias" class="pack2">
         <h3>Experiencias de la comunidad</h3>
         <div class="grid">
 
@@ -80,7 +83,7 @@
       <section class="card login">
         <h3>Acceso</h3>
         <label>Usuario
-          <input type="text" placeholder="usuario@example.com">
+          <input type="text" placeholder="usuario@ejemplo.com">
         </label>
         <label>Contraseña
           <input type="password" placeholder="********">
@@ -91,7 +94,7 @@
         </div>
       </section>
 
-      <section class="card">
+      <section class="pack3">
         <h3>Top destinos</h3>
         <ul>
           <li>Tailandia</li>
@@ -100,7 +103,7 @@
         </ul>
       </section>
 
-      <section class="card" id="consejos">
+      <section class="pack4" id="consejos">
         <h3>Consejos rápidos</h3>
         <ul>
           <li>Lleva seguro médico</li>
