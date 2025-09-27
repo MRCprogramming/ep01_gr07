@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Viajes Inolvidables</title>
 
-  <!-- Enlace al documento externo de colores CSS -->
+  <!-- Enlace al CSS externo -->
   <link rel="stylesheet" href="style/style.css">
 </head>
 
@@ -22,7 +22,7 @@
     </nav>
   </header>
 
-  <!-- Estructura de la página principal-->
+  <!-- CONTENIDO PRINCIPAL -->
   <main class="layout">
 
     <!-- Columna principal -->
@@ -30,44 +30,42 @@
 
       <!-- Banner -->
       <section class="banner">
-        <h1>Descubre el mundo con nosotros</h1>
-        <p>Viaja, experiencias con los que mas quieres y vive aventuras inolvidables</p>
-        <p>Descubre más deslizando por esta página</p>
+        <h1 class="mensaje-inicial">Descubre el mundo con nosotros</h1>
+        <p class="mensaje-inicial">Viaja ligero, comparte experiencias y vive aventuras inolvidables.</p>
       </section>
 
       <!-- Pack destacado -->
-      <section class="pack1">
-        <div class="overlay">
-          <h2>Pack Sudeste Asiático</h2>
-          <p>Vietnam &amp; Camboya: buses, hostales y guía de visados</p>
-          <div class="row">
-            <span class="price">€600</span>
-            <a class="btn" href="compra.html">Comprar</a>
-          </div>
+      <section class="card">
+        <h2>Pack Sudeste Asiático</h2>
+        <img src="images/ankor.jpg" alt="Pack Sudeste Asiático">
+        <p>Incluye Vietnam &amp; Camboya: buses, hostales y guía de visados.</p>
+        <div class="row">
+          <span class="price">€600</span>
+          <a class="btn" href="compra.html">Comprar</a>
         </div>
       </section>
-      
+
       <!-- Experiencias -->
-      <section id="experiencias" class="pack2">
+      <section id="experiencias" class="card">
         <h3>Experiencias de la comunidad</h3>
         <div class="grid">
 
           <div class="item card">
-            <img src="images/katmandu.jpg" alt="Hostal Katmandú">
+            <img src="images/resort-kathmandu.jpeg" alt="Hostal Katmandú" width="200" height="150">
             <p>Hostal en Katmandú</p>
             <a class="btn small" href="registro.html">Ver más</a>
             <button class="like">♡</button>
           </div>
 
           <div class="item card">
-            <img src="images/sudamerica.jpg" alt="Sudamérica en bus">
+            <img src="images/machu-pichu.jpg" alt="Sudamérica en bus" width="200" height="150">
             <p>Sudamérica en bus</p>
             <a class="btn small" href="registro.html">Ver más</a>
             <button class="like">♡</button>
           </div>
 
           <div class="item card">
-            <img src="images/india.jpg" alt="Visado India">
+            <img src="images/norte-india.jpg" alt="Visado India" width="200" height="150">
             <p>Visado para India</p>
             <a class="btn small" href="registro.html">Ver más</a>
             <button class="like">♡</button>
@@ -82,7 +80,7 @@
       <section class="card login">
         <h3>Acceso</h3>
         <label>Usuario
-          <input type="text" placeholder="usuario@ejemplo.com">
+          <input type="text" placeholder="usuario@example.com">
         </label>
         <label>Contraseña
           <input type="password" placeholder="********">
@@ -93,7 +91,7 @@
         </div>
       </section>
 
-      <section class="pack3">
+      <section class="card">
         <h3>Top destinos</h3>
         <ul>
           <li>Tailandia</li>
@@ -102,7 +100,7 @@
         </ul>
       </section>
 
-      <section class="pack4" id="consejos">
+      <section class="card" id="consejos">
         <h3>Consejos rápidos</h3>
         <ul>
           <li>Lleva seguro médico</li>
@@ -126,6 +124,5 @@
       });
     });
   </script>
-
 </body>
 </html>
