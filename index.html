@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Viajes Inolvidables</title>
-
-  <!-- Enlace al CSS externo -->
   <link rel="stylesheet" href="style/style.css">
 </head>
 
@@ -22,60 +20,74 @@
     </nav>
   </header>
 
-  <!-- CONTENIDO PRINCIPAL -->
+  <!-- CONTENIDO -->
   <main class="layout">
 
-    <!-- Columna principal -->
+    <!-- COLUMNA PRINCIPAL -->
     <section class="main">
 
-      <!-- Banner -->
-      <section class="banner">
-        <h1 class="mensaje-inicial">Descubre el mundo con nosotros</h1>
-        <p class="mensaje-inicial">Viaja ligero, comparte experiencias y vive aventuras inolvidables.</p>
-      </section>
-
-      <!-- Pack destacado -->
-      <section class="card">
-        <h2>Pack Sudeste Asiático</h2>
-        <img src="images/ankor.jpg" alt="Pack Sudeste Asiático">
-        <p>Incluye Vietnam &amp; Camboya: buses, hostales y guía de visados.</p>
-        <div class="row">
-          <span class="price">€600</span>
-          <a class="btn" href="compra.html">Comprar</a>
+      <!-- HERO / BANNER -->
+      <section class="panel panel-hero">
+        <div class="panel-overlay">
+          <h1 class="mensaje-inicial">Descubre el mundo con nosotros</h1>
+          <p class="mensaje-inicial">Viaja ligero, comparte experiencias y vive aventuras inolvidables.</p>
         </div>
       </section>
 
-      <!-- Experiencias -->
-      <section id="experiencias" class="card">
-        <h3>Experiencias de la comunidad</h3>
+      <!-- PACK DESTACADO: panel con imagen de fondo + overlay -->
+      <section class="panel panel-pack panel-pack-1">
+        <div class="panel-overlay">
+          <h2>Pack Sudeste Asiático</h2>
+          <p>Incluye Vietnam &amp; Camboya: buses, hostales y guía de visados.</p>
+          <div class="row">
+            <span class="price">€600</span>
+            <a class="btn" href="compra.html">Comprar</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCIAS: rejilla de tarjetas pequeñas (no usan overlay oscuro) -->
+      <section id="experiencias" class="section">
+        <h3 class="section-title">Experiencias de la comunidad</h3>
+
         <div class="grid">
+          <article class="item-card">
+            <img src="images/resort-kathmandu.jpeg" alt="Hostal Katmandú">
+            <div class="item-body">
+              <h4>Hostal en Katmandú</h4>
+              <div class="item-actions">
+                <a class="btn small" href="registro.html">Ver más</a>
+                <button class="like">♡</button>
+              </div>
+            </div>
+          </article>
 
-          <div class="item card">
-            <img src="images/resort-kathmandu.jpeg" alt="Hostal Katmandú" width="200" height="150">
-            <p>Hostal en Katmandú</p>
-            <a class="btn small" href="registro.html">Ver más</a>
-            <button class="like">♡</button>
-          </div>
+          <article class="item-card">
+            <img src="images/machu-pichu.jpg" alt="Machu Picchu">
+            <div class="item-body">
+              <h4>Sudamérica en bus</h4>
+              <div class="item-actions">
+                <a class="btn small" href="registro.html">Ver más</a>
+                <button class="like">♡</button>
+              </div>
+            </div>
+          </article>
 
-          <div class="item card">
-            <img src="images/machu-pichu.jpg" alt="Sudamérica en bus" width="200" height="150">
-            <p>Sudamérica en bus</p>
-            <a class="btn small" href="registro.html">Ver más</a>
-            <button class="like">♡</button>
-          </div>
-
-          <div class="item card">
-            <img src="images/norte-india.jpg" alt="Visado India" width="200" height="150">
-            <p>Visado para India</p>
-            <a class="btn small" href="registro.html">Ver más</a>
-            <button class="like">♡</button>
-          </div>
-
+          <article class="item-card">
+            <img src="images/norte-india.jpg" alt="Norte India">
+            <div class="item-body">
+              <h4>Visado para India</h4>
+              <div class="item-actions">
+                <a class="btn small" href="registro.html">Ver más</a>
+                <button class="like">♡</button>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
     </section>
 
-    <!-- Barra lateral -->
+    <!-- BARRA LATERAL -->
     <aside class="sidebar">
       <section class="card login">
         <h3>Acceso</h3>
@@ -91,32 +103,36 @@
         </div>
       </section>
 
-      <section class="card">
-        <h3>Top destinos</h3>
-        <ul>
-          <li>Tailandia</li>
-          <li>Perú</li>
-          <li>Nepal</li>
-        </ul>
+      <section class="card panel-side panel-side-1">
+        <div class="panel-overlay panel-overlay-side">
+          <h4>Top destinos</h4>
+          <ul>
+            <li>Tailandia</li>
+            <li>Perú</li>
+            <li>Nepal</li>
+          </ul>
+        </div>
       </section>
 
-      <section class="card" id="consejos">
-        <h3>Consejos rápidos</h3>
-        <ul>
-          <li>Lleva seguro médico</li>
-          <li>Infórmate sobre visados</li>
-          <li>Viaja ligero</li>
-        </ul>
+      <section class="card panel-side panel-side-2">
+        <div class="panel-overlay panel-overlay-side">
+          <h4>Consejos rápidos</h4>
+          <ul>
+            <li>Lleva seguro médico</li>
+            <li>Infórmate sobre visados</li>
+            <li>Viaja ligero</li>
+          </ul>
+        </div>
       </section>
     </aside>
   </main>
 
-  <!-- PIE DE PÁGINA -->
+  <!-- FOOTER -->
   <footer class="footer">
     <p>© 2025 Viajes Inolvidables · <a href="#">Política de privacidad</a></p>
   </footer>
 
-  <!-- Script para los corazones -->
+  <!-- JS corazones -->
   <script>
     document.querySelectorAll('.like').forEach(function(btn){
       btn.addEventListener('click', function(){
