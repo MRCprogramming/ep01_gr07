@@ -19,6 +19,12 @@ body {
 .header .logo {
   font-weight: bold;
   font-size: 28px;
+  align-items: center;
+}
+.header .logo img {
+  vertical-align: middle;
+  margin-right: 8px;
+  width: 40px;
 }
 .nav a {
   margin-left: 18px;
@@ -207,6 +213,15 @@ body {
   cursor: pointer;
 }
 
+/* Boton para idioma */
+.language-button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .grid .item-card { width: calc(50% - 8px); }
@@ -217,3 +232,4 @@ body {
   .panel-pack { min-height: 180px; }
   .panel { min-height: 120px; }
 }
+
