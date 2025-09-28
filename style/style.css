@@ -1,4 +1,4 @@
-gbody {
+body {
   font-family: Arial, sans-serif;
   margin: 0;
   background: #f0f2f5;
@@ -32,11 +32,11 @@ gbody {
   display: flex;
   gap: 20px;
   max-width: 1100px;
-  margin: 20px auto;
+  margin: 0px auto;
   padding: 0 10px;
 }
 .main { flex: 2; }
-.sidebar { flex: 1; }
+.sidebar { flex: 1; margin-top: 12px; }
 
 /* PANEL / HERO (imagen grande con overlay) */
 .panel {
@@ -54,11 +54,13 @@ gbody {
   background-size: cover;
   background-position: center;
   padding: 0;
+  margin-top: 12px;
 }
 .panel-hero .panel-overlay {
   background: rgba(255,255,255,0.05); /* ligero, sólo para que el texto contraste */
   padding: 30px 20px;
   color: #012;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   /* texto oscuro sobre imagen clara */
 }
 
@@ -109,6 +111,7 @@ gbody {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 .item-card img {
   width: 100%;
