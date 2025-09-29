@@ -224,6 +224,8 @@ body {
   cursor: pointer;
 }
 
+/* FORMULARIO DE REGISTRO */  
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
   .grid .item-card { width: calc(50% - 8px); }
