@@ -43,7 +43,7 @@
           <p>Incluye Vietnam &amp; Camboya: buses, hostales y guía de visados.</p>
           <div class="row">
             <span class="price">€600</span>
-            <a class="btn" href="#" onclick="registradoCompra()">Comprar</a> <!-- Para comprar debes estar registrado-->
+            <a class="btn" href="compra.html">Comprar</a> 
           </div>
         </div>
       </section>
@@ -183,26 +183,5 @@
        · <a href="#"><img src="images/tiktok.png" width="24" alt="TikTok"></a>
     </p>
   </footer>
-
-  <!-- JavaScript corazones -->
-  <script>
-    document.querySelectorAll('.like').forEach(function(btn){
-      btn.addEventListener('click', function(){
-        btn.textContent = btn.textContent.trim() === '♡' ? '♥' : '♡';
-      });
-    });
-  </script>
-
-<script>
-function registradoCompra() { /* Verificar registro para compra */
-    let registrado = localStorage.getItem('registrado') === 'true';
-  if (registrado) {
-      window.location.href = "compra.html";
-    } else {
-      window.location.href = "registro.html";
-    }
-  }
-</script>
-
 </body>
 </html>
