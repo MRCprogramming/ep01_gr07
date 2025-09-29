@@ -107,6 +107,7 @@ body {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+  margin-bottom: 12px;
 }
 .item-card {
   background: #fff;
@@ -174,6 +175,7 @@ body {
 /* imágenes de sidebar (ajusta nombres) */
 .panel-side-1 { background-image: url("../images/side-forest.jpg"); }
 .panel-side-2 { background-image: url("../images/side-mountain.jpg"); }
+.panel-side-3 { background-image: url("../images/mochileros.png"); }
 /* overlay más oscuro pero lateral */
 .panel-side .panel-overlay {
   background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45));
