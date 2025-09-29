@@ -43,7 +43,7 @@
           <p>Incluye Vietnam &amp; Camboya: buses, hostales y guía de visados.</p>
           <div class="row">
             <span class="price">€600</span>
-            <a class="btn" href="compra.html">Comprar</a>
+            <a class="btn" href="#" onclick="registradoCompra()">Comprar</a> <!-- Para comprar debes estar registrado-->
           </div>
         </div>
       </section>
@@ -192,5 +192,17 @@
       });
     });
   </script>
+
+<script>
+function registradoCompra() { /* Verificar registro para compra */
+    let registrado = localStorage.getItem('registrado') === 'true';
+  if (registrado) {
+      window.location.href = "compra.html";
+    } else {
+      window.location.href = "registro.html";
+    }
+  }
+</script>
+
 </body>
 </html>

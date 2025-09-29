@@ -69,7 +69,7 @@ body {
   padding: 0 10px;
 }
 .main { flex: 2; }
-.sidebar { flex: 1; margin-top: 0px; align-items: stretch; }
+.sidebar { flex: 1; margin-top: 12px; align-items: stretch; }
 
 /* Panel (imagen grande con overlay) */
 .panel {
