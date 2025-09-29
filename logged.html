@@ -19,20 +19,96 @@
 
   <main class="layout">
     <section class="main">
-      <section class="card">
-        <h2>¡Bienvenido, usuario!</h2>
-        <p>Has iniciado sesión correctamente</p>
+      <section class="main">
+
+      <!-- Banner -->
+      <section class="panel panel-hero">
+        <div class="panel-overlay">
+          <h1 class="mensaje-inicial">Descubre el mundo con nosotros</h1>
+          <p class="mensaje-inicial">Viaja ligero, comparte experiencias y vive aventuras inolvidables.</p>
+        </div>
       </section>
 
-      <section class="card">
-        <h3>Tus recomendaciones</h3>
+      <!-- Pack principal: panel con imagen de fondo -->
+      <section class="panel panel-pack panel-pack-1">
+        <div class="panel-overlay">
+          <h2>Pack Sudeste Asiático</h2>
+          <p>Incluye Vietnam &amp; Camboya: buses, hostales y guía de visados.</p>
+          <div class="row">
+            <span class="price">€600</span>
+            <a class="btn" href="compra.html">Comprar</a> 
+          </div>
+        </div>
+      </section>
+
+      <!-- Experiencias: rejilla de tarjetas pequeñas (no usan overlay oscuro) -->
+      <section id="experiencias" class="section">
+        <h3 class="section-title">Experiencias de la comunidad</h3>
+
         <div class="grid">
+          <article class="item-card">
+            <img src="images/rusia.png" alt="Rusia">
+            <div class="item-body">
+              <h4>Descubre Rusia</h4>
+              <div class="item-actions">
+                <a class="btn small" href="registro.html">Ver más</a>
+                <button class="like">♡</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <img src="images/kenia.png" alt="Kenia">
+            <div class="item-body">
+              <h4>Safari en Kenia</h4>
+              <div class="item-actions">
+                <a class="btn small" href="registro.html">Ver más</a>
+                <button class="like">♡</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <img src="images/australia.png" alt="Australia">
+            <div class="item-body">
+              <h4>Aventura en Australia</h4>
+              <div class="item-actions">
+                <a class="btn small" href="registro.html">Ver más</a>
+                <button class="like">♡</button>
+              </div>
+            </div>
+          </article>
+
+        </div><div class="grid">
           <article class="item-card">
             <img src="images/resort-kathmandu.jpeg" alt="Hostal Katmandú">
             <div class="item-body">
-              <h4>Hostal en Katmandú</h4>
+              <h4>Explora Katmandú</h4>
               <div class="item-actions">
-                <a class="btn small" href="#">Ver más</a>
+                <a class="btn small" href="registro.html">Ver más</a>
+                <button class="like">♡</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <img src="images/machu-pichu.jpg" alt="Machu Picchu">
+            <div class="item-body">
+              <h4>Sudamérica Inolvidable</h4>
+              <div class="item-actions">
+                <a class="btn small" href="registro.html">Ver más</a>
+                <button class="like">♡</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="item-card">
+            <img src="images/norte-india.jpg" alt="Norte India">
+            <div class="item-body">
+              <h4>Visado para India</h4>
+              <div class="item-actions">
+                <a class="btn small" href="registro.html">Ver más</a>
+                <button class="like">♡</button>
               </div>
             </div>
           </article>
@@ -40,18 +116,92 @@
       </section>
     </section>
 
+    </section>
+
     <aside class="sidebar">
       <section class="card">
+<<<<<<< HEAD
         <img src="images/avatar-placeholder.png" alt="Avatar" class="avatar" style="width:72px; border-radius:50%">
         <div class="user-name">Nombre Apellido</div>
         <a class="btn outline" href="index.html" >Cerrar sesión</a>
+=======
+        <img src="images/profile-picture.png" alt="Avatar" class="avatar" style="width:72px; border-radius: 50%;">
+        <div class="user-name">John Doe</div>
+        <a class="btn outline" href="index.html">Cerrar sesión</a>
+>>>>>>> 651958c13a4fbc5da8458190155c9ddce7fade28
       </section>
 
-      <section class="card">
-        <h4>Buscar experiencias</h4>
-        <input type="search" placeholder="Buscar..." style="width:100%; padding:8px; margin-top:8px; border-radius:6px; border:1px solid #ddd">
+      <section class="card form-card">
+      <h4>Últimos consejos</h4>
+      <ul>
+        <li>Reserva alojamiento con antelación</li>
+        <li>Lleva copia de tus documentos</li>
+        <li>Aprende frases básicas del idioma local</li>
+        <li>Consulta el clima antes de viajar</li>
+        <li>Guarda dinero en diferentes lugares</li>
+
+      <form class="reg-form" onsubmit="return false;">
+        </div>
+      </form>
+    </section>
+
+    <section class="card form-card">
+      <h4>¿Tienes algún consejo?</h4>
+      <section class="card login">
+        <label>
+          <input type="text" placeholder="Título del consejo">
+        </label>
+          <input type="password" placeholder="Escribe aquí tu consejo..." style="height:80px; margin-top:8px; border-radius:6px; border:1px solid #ddd; padding:8px; width:100%; box-sizing:border-box;">
+        <div class="row">
+          <a class="btn outline" href="#">Enviar</a>
+        </div>
       </section>
+      
+
+      <form class="reg-form" onsubmit="return false;">
+        </div>
+      </form>
+    </section>
+
+      <section class="card">
+  <h4>Buscar experiencias</h4>
+  <div class="checkbox-grid">
+    <label><input type="checkbox" name="continente" value="europa"> Europa</label>
+    <label><input type="checkbox" name="continente" value="australia"> Australia</label>
+    <label><input type="checkbox" name="continente" value="africa"> África</label>
+    <label><input type="checkbox" name="continente" value="sudamerica"> América</label>
+  </div>
+  <input type="search" placeholder="Buscar..." style="width:100%; padding:8px; margin-top:8px; margin-bottom: 14px; border-radius:6px; border:1px solid #ddd">
+  
+</section>
+
+
+      <!-- Calendario -->
+      <div class="card">
+      <div class="bloque-lateral caja-calendario">
+        <div class="calendario">
+          <div class="encabezado-calendario">
+            <span>SEPTIEMBRE 2025</span>
+          </div>
+          <div class="rejilla-calendario">
+            <span>D</span><span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span>
+            <span class="vacio">31</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+            <span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span>
+            <span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span><span>20</span>
+            <span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span><span>27</span>
+            <span>28</span><span>29</span><span>30</span><span class="vacio">1</span><span class="vacio">2</span><span class="vacio">3</span><span class="vacio">4</span>
+          </div>
+        </div>
+      </div>
+
     </aside>
   </main>
+  <footer class="footer">
+    <p>© 2025 Viajes Inolvidables · <a href="#">Política de privacidad</a>
+       · <a href="#"><img src="images/youtube.png" width="24" alt="Youtube"></a>
+       · <a href="#"><img src="images/instagram.png" width="24" alt="Instagram"></a>
+       · <a href="#"><img src="images/tiktok.png" width="24" alt="TikTok"></a>
+    </p>
+  </footer>
 </body>
 </html>
