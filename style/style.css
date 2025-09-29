@@ -33,6 +33,25 @@ body {
 }
 .nav a:hover { text-decoration: underline; }
 
+.brand { 
+  color: #004080;
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+}
+
+.brand a {
+  color: inherit;          /* hereda el color del padre (.brand) */
+  text-decoration: none;   /* quita el subrayado */
+}
+
+.brand a:hover {
+  text-decoration: underline; 
+}
+
 /* LAYOUT */
 .layout {
   display: flex;
@@ -76,7 +95,7 @@ body {
   background-position: center;
   min-height: 240px;
 }
-/* asigna las imágenes concretas (modifica nombres si tus archivos difieren) */
+/* Asigna las imágenes concretas */
 .panel-pack-1 { background-image: url("../images/ankor.jpg"); }
 
 /* Overlay oscuro encargado del rectángulo inferior */
@@ -94,7 +113,7 @@ body {
 /* Precio destacado */
 .price { font-weight: 700; color: #ffd166; }
 
-/* SECCION EXPERIENCIAS - rejilla de tarjetas pequeñas (blancas) */
+/* Sección experiencias - rejilla de tarjetas pequeñas (blancas) */
 .section { margin-bottom: 20px; }
 .section-title {
   margin: 0 0 10px 4px;
@@ -104,11 +123,14 @@ body {
 
 /* item-card: pequeñas tarjetas dentro de la grid (sin overlay oscuro) */
 .grid {
+  color: black;
+  align-items: stretch;
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
   margin-bottom: 12px;
-}
+  }
+
 .item-card {
   background: #fff;
   border: 1px solid #ddd;
@@ -148,8 +170,8 @@ body {
 
 /* SIDEBAR: cajas blancas y paneles con imagen + overlay discreto */
 .card {
-  background: #fff;
-  border: 1px solid #ddd;
+  background: white;
+  border: 1px solid white;
   border-radius: 6px;
   padding: 12px;
   padding-right: 24px;
@@ -159,8 +181,8 @@ body {
 }
 
 .card2 {
-  background: #fff;
-  border: 1px solid #ddd;
+  background: #004080;
+  border: 1px solid white;
   border-radius: 6px;
   padding: 12px;
   padding-right: 24px;
@@ -177,6 +199,11 @@ body {
   margin-bottom: 8px;
   border: 1px solid #ccc;
   border-radius: 6px;
+}
+
+.spacer-vertical {
+  height: 12px;
+  justify-content: space-around;
 }
 
 /* panel-side: sidebar con imagen de fondo pero overlay para texto */
@@ -221,7 +248,7 @@ body {
 .footer a { color: #ffcc00; text-decoration: none; }
 .footer a:hover { text-decoration: underline; }
 
-/* CORAZONES (estética) */
+/* Corazones (estética) */
 .like {
   background: transparent;
   border: none;
@@ -236,11 +263,9 @@ body {
   color: white;
   font-size: 16px;
   cursor: pointer;
-}
+} 
 
-/* FORMULARIO DE REGISTRO */  
-
-/* RESPONSIVE */
+/* Respuestas */
 @media (max-width: 900px) {
   .grid .item-card { width: calc(50% - 8px); }
 }
