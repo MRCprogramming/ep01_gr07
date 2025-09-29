@@ -8,67 +8,71 @@
 </head>
 <body>
 
-  <header class="site-header small">
-    <h1 class="brand"><a href="index.html">Atras</a></h1>
+  <!-- Header (igual estética que index.html) -->
+  <header class="header small">
+    <div class="logo">✈️ Viajes Inolvidables</div>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="index.html#experiencias">Experiencias</a>
+      <a href="index.html#foro">Foro</a>
+      <a href="index.html#contacto">Contacto</a>
+      <a href="registro.html" aria-current="page">Registro</a>
+    </nav>
   </header>
 
   <main class="centered">
-    <section class="card2 form-card">
+    <section class="card form-card">
       <h2>Registro de nuevo usuario</h2>
 
       <form class="reg-form" onsubmit="return false;">
-
-        <div class="grid"><label>Nombre
-          <div class="spacer-vertical"></div>
+        <label>Nombre
           <input type="text" name="nombre" required>
         </label>
-        </div>
 
-        <div class="grid"><label>Apellidos
-          <div class="spacer-vertical"></div>
+        <label>Apellidos
           <input type="text" name="apellidos" required>
         </label>
-        </div>
 
-        <div class="grid"><label>Correo electrónico
-          <div class="spacer-vertical"></div>
+        <label>Correo electrónico
           <input type="email" name="email" required>
         </label>
 
-        <div class="grid"><label>Confirmar correo electrónico
-          <div class="spacer-vertical"></div>
+        <label>Confirmar correo electrónico
           <input type="email" name="emailconf" required>
         </label>
 
-        <div class="grid"><label>Fecha de nacimiento
-          <div class="spacer-vertical"></div>
+        <label>Fecha de nacimiento
           <input type="date" name="fechanac" required>
         </label>
 
-        <div class="grid"><label>Usuario
-          <div class="spacer-vertical"></div>
+        <label>Usuario (login)
           <input type="text" name="login" required>
         </label>
 
-        <div class="grid"><label>Contraseña
-          <div class="spacer-vertical"></div>
-          <input type="password" name="password" required>
+        <label>Contraseña
+          <input type="password" name="password" minlength="6" required>
         </label>
 
-        <div class="grid"><label>Subir imagen de perfil
+        <label>Subir imagen de perfil
           <input type="file" name="avatar" accept="image/*">
         </label>
 
         <label class="policy">
           <input type="checkbox" required> Acepto la <a href="#">política de privacidad</a>
         </label>
+
         <div class="row">
+          <!-- según enunciado: botón que redirige a la versión b (logged.html) -->
           <a class="btn" href="logged.html">Guardar datos y acceder</a>
           <a class="btn outline" href="index.html">Cancelar</a>
         </div>
       </form>
     </section>
   </main>
+
+  <footer class="footer">
+    <p>© 2025 Viajes Inolvidables · <a href="#">Política de privacidad</a></p>
+  </footer>
 
 </body>
 </html>

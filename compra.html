@@ -3,37 +3,47 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Comprar pack · Mochileros Sin Fronteras</title>
+  <title>Comprar pack · Viajes Inolvidables</title>
   <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
 
-  <header class="site-header small">
-    <h1 class="brand"><a href="index.html">Mochileros Sin Fronteras</a></h1>
+  <header class="header small">
+    <div class="logo">✈️ Viajes Inolvidables</div>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="index.html#experiencias">Experiencias</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
   </header>
 
-  <main class="centered two-col">
-    <section class="card">
-      <h2>Pack seleccionado</h2>
-      <img src="images/pack1.jpg" alt="Pack seleccionado" style="max-width:100%">
+  <main class="centered two-column">
+    <!-- Info del pack -->
+    <section class="card pack-info">
+      <h2 id="pack-label">Pack seleccionado</h2>
+      <img id="pack-image" src="images/ankor.jpg" alt="Pack seleccionado" style="max-width:100%; border-radius:6px; margin-bottom:12px;">
       <h3 id="pack-title">Pack Sudeste Asiático</h3>
-      <p>Vietnam & Camboya — rutas en bus y alojamiento económico.</p>
-      <div class="price">€600</div>
+      <p id="pack-desc">Vietnam &amp; Camboya — rutas en bus y alojamiento económico.</p>
+      <div class="price" id="pack-price">€600</div>
     </section>
 
-    <section class="card">
+    <!-- Formulario -->
+    <section class="card form-card">
       <h2>Formulario de compra</h2>
+
       <form id="buy-form" onsubmit="return false;">
+        <input type="hidden" id="packId" name="packId" value="">
+
         <label>Nombre
-          <input type="text" required>
+          <input type="text" name="cliente_nombre" required>
         </label>
 
         <label>Correo electrónico
-          <input type="email" required>
+          <input type="email" name="cliente_email" required>
         </label>
 
         <label>Tipo de tarjeta
-          <select required>
+          <select name="tarjeta_tipo" required>
             <option>Visa</option><option>Mastercard</option><option>American Express</option>
           </select>
         </label>
@@ -62,8 +72,63 @@
     </section>
   </main>
 
+  <footer class="footer">
+    <p>© 2025 Viajes Inolvidables</p>
+  </footer>
+
   <script>
-    // JS mínimo: limpiar formulario
+    // Datos de ejemplo: ajusta nombres de imagen si tus ficheros son otros
+    const PACKS = {
+      sudeste: {
+        title: 'Pack Sudeste Asiático',
+        desc: 'Vietnam & Camboya — rutas en bus y alojamiento económico.',
+        price: '€600',
+        image: 'images/ankor.jpg'
+      },
+      machu: {
+        title: 'Pack Andes',
+        desc: 'Perú & Bolivia — trekking y rutas en bus.',
+        price: '€750',
+        image: 'images/machu-pichu.jpg'
+      },
+      africa: {
+        title: 'Pack África',
+        desc: 'Tanzania & Zanzíbar — safaris y playas.',
+        price: '€980',
+        image: 'images/africa.jpg'
+      }
+    };
+
+    function getQueryParam(name) {
+      return new URLSearchParams(window.location.search).get(name);
+    }
+
+    function showPackFromQuery() {
+      const packId = getQueryParam('pack') || 'sudeste';
+      const data = PACKS[packId];
+      const titleEl = document.getElementById('pack-title');
+      const descEl = document.getElementById('pack-desc');
+      const priceEl = document.getElementById('pack-price');
+      const imgEl = document.getElementById('pack-image');
+      const packIdInput = document.getElementById('packId');
+
+      if (data) {
+        titleEl.textContent = data.title;
+        descEl.textContent = data.desc;
+        priceEl.textContent = data.price;
+        imgEl.src = data.image;
+        imgEl.alt = data.title;
+        packIdInput.value = packId;
+      } else {
+        titleEl.textContent = 'Pack no encontrado';
+        descEl.textContent = 'Vuelve a la página principal y elige un pack.';
+        priceEl.textContent = '';
+        imgEl.src = 'images/placeholder.jpg';
+        packIdInput.value = '';
+      }
+    }
+
+    // limpiar formulario
     document.getElementById('clear').addEventListener('click', function(e){
       e.preventDefault();
       document.getElementById('buy-form').reset();
@@ -71,10 +136,14 @@
 
     document.getElementById('do-buy').addEventListener('click', function(e){
       e.preventDefault();
-      alert('Gracias por su compra (demo).');
+      const packId = document.getElementById('packId').value;
+      const packTitle = PACKS[packId] ? PACKS[packId].title : 'este pack';
+      alert('Gracias por comprar ' + packTitle + ' (demo).');
       location.href = 'index.html';
     });
-  </script>
 
+    // ejecutar al cargar
+    showPackFromQuery();
+  </script>
 </body>
 </html>

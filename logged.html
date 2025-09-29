@@ -3,74 +3,54 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bienvenido · Mochileros Sin Fronteras</title>
+  <title>Mi cuenta - Viajes Inolvidables</title>
   <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
 
-  <header class="site-header">
-    <h1 class="brand"><a href="index.html">Mochileros Sin Fronteras</a></h1>
-
-    <nav class="main-nav" aria-label="Navegación principal">
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="index.html#experiencias">Experiencias</a></li>
-        <li><a href="index.html#consejos">Consejos</a></li>
-      </ul>
+  <header class="header">
+    <div class="logo">✈️ Viajes Inolvidables</div>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="index.html#experiencias">Experiencias</a>
+      <a href="index.html#contacto">Contacto</a>
     </nav>
   </header>
 
   <main class="layout">
-    <section class="main-col">
-      <h2>Bienvenido, Ana</h2>
-      <p>Gracias por registrarte. Explora experiencias y comparte tus viajes.</p>
-      <section class="experiences">
+    <section class="main">
+      <section class="card">
+        <h2>¡Bienvenido, usuario!</h2>
+        <p>Has iniciado sesión correctamente (demo).</p>
+      </section>
+
+      <section class="card">
         <h3>Tus recomendaciones</h3>
         <div class="grid">
-          <article class="card">
-            <img src="images/exp-1.jpg" alt="Hostal en Katmandú">
-            <h4>Hostal en Katmandú</h4>
-            <a class="small-btn" href="#">Ver más</a>
+          <article class="item-card">
+            <img src="images/resort-kathmandu.jpeg" alt="Hostal Katmandú">
+            <div class="item-body">
+              <h4>Hostal en Katmandú</h4>
+              <div class="item-actions">
+                <a class="btn small" href="#">Ver más</a>
+              </div>
+            </div>
           </article>
+          <!-- puedes duplicar más articles si quieres -->
         </div>
       </section>
     </section>
 
     <aside class="sidebar">
-      <section class="card userbox">
-        <img src="images/avatar-placeholder.png" alt="Avatar" class="avatar">
-        <div class="user-name">Ana García</div>
+      <section class="card">
+        <img src="images/avatar-placeholder.png" alt="Avatar" class="avatar" style="width:72px; border-radius:50%">
+        <div class="user-name">Nombre Apellido</div>
         <a class="btn outline" href="index.html">Cerrar sesión</a>
       </section>
 
       <section class="card">
-        <h4>Busca experiencias</h4>
-        <div>
-          <input placeholder="Buscar..." type="search">
-        </div>
-        <div class="filters">
-          <label><input type="checkbox"> Asia</label>
-          <label><input type="checkbox"> América</label>
-          <label><input type="checkbox"> África</label>
-          <label><input type="checkbox"> Europa</label>
-        </div>
-      </section>
-
-      <section class="card">
-        <h4>Últimos consejos</h4>
-        <ul class="plain-list">
-          <li><a href="#">Cómo elegir seguro médico</a></li>
-          <li><a href="#">Mejores apps para viajeros</a></li>
-        </ul>
-
-        <h4>¿Tienes algún consejo?</h4>
-        <form onsubmit="return false;">
-          <input placeholder="Título" required>
-          <textarea placeholder="Descripción" rows="3" required></textarea>
-          <div class="row">
-            <button class="btn">Enviar</button>
-          </div>
-        </form>
+        <h4>Buscar experiencias</h4>
+        <input type="search" placeholder="Buscar..." style="width:100%; padding:8px; margin-top:8px; border-radius:6px; border:1px solid #ddd">
       </section>
     </aside>
   </main>
