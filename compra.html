@@ -43,9 +43,13 @@
         </label>
 
         <label>Tipo de tarjeta
-          <select style="margin-bottom: 13px;" name="tarjeta_tipo" required>
-            <option>Visa</option><option>Mastercard</option><option>American Express</option>
+          <select id="tarjeta_tipo" name="tarjeta_tipo" required style="margin-bottom:13px;">
+          <option value="" selected disabled hidden>Selecciona tipo</option>
+          <option value="visa">Visa</option>
+          <option value="mastercard">Mastercard</option>
+          <option value="amex">American Express</option>
           </select>
+
         </label>
 
         <label>Número de tarjeta

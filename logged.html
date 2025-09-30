@@ -18,14 +18,12 @@
   </header>
 
   <main class="layout">
-    <section class="main">
-      <section class="main">
+    <div class="main">
 
       <!-- Banner -->
       <section class="panel panel-hero">
         <div class="panel-overlay">
-          <h1 class="mensaje-inicial">Descubre el mundo con nosotros</h1>
-          <p class="mensaje-inicial">Viaja ligero, comparte experiencias y vive aventuras inolvidables.</p>
+          <h2 class="mensaje-inicial">Descubre el mundo con nosotros</h2>
         </div>
       </section>
 
@@ -79,7 +77,8 @@
             </div>
           </article>
 
-        </div><div class="grid">
+        </div>
+        <div class="grid">
           <article class="item-card">
             <img src="images/resort-kathmandu.jpeg" alt="Hostal Katmandú">
             <div class="item-body">
@@ -114,16 +113,16 @@
           </article>
         </div>
       </section>
-    </section>
+      </div>
 
-    </section>
+    
 
     <aside class="sidebar">
-      <section class="card">
+      <div class="card">
         <img src="images/profile-picture.png" alt="Avatar" class="avatar" style="width:72px; border-radius: 50%">
         <div class="user-name">John Doe</div>
         <a class="btn outline" href="index.html">Cerrar sesión</a>
-      </section>
+      </div>
 
       <section class="card form-card">
       <h4>Últimos consejos</h4>
@@ -133,29 +132,24 @@
         <li>Aprende frases básicas del idioma local</li>
         <li>Consulta el clima antes de viajar</li>
         <li>Guarda dinero en diferentes lugares</li>
-
-      <form class="reg-form" onsubmit="return false;">
-        </div>
-      </form>
+      </ul>
     </section>
 
-    <section class="card form-card">
-      <h4>¿Tienes algún consejo?</h4>
-      <section class="card login">
-        <label>
-          <input type="text" placeholder="Título del consejo">
-        </label>
-          <input type="password" placeholder="Escribe aquí tu consejo..." style="height:80px; margin-top:8px; border-radius:6px; border:1px solid #ddd; padding:8px; width:100%; box-sizing:border-box;">
-        <div class="row">
-          <a class="btn outline" href="#">Enviar</a>
-        </div>
-      </section>
-      
+      <section class="card form-card">
+    <h4>¿Tienes algún consejo?</h4>
+    <form class="reg-form" onsubmit="return false;">
+      <label for="titulo_consejo">Título del consejo</label>
+      <input id="titulo_consejo" type="text" placeholder="Título del consejo">
 
-      <form class="reg-form" onsubmit="return false;">
-        </div>
-      </form>
-    </section>
+      <label for="texto_consejo">Consejo</label>
+      <textarea id="texto_consejo" placeholder="Escribe aquí tu consejo..." style="height:80px; margin-top:8px; border-radius:6px; border:1px solid #ddd; padding:8px; width:100%; box-sizing:border-box;"></textarea>
+
+      <div class="row">
+        <button class="btn outline" type="submit">Enviar</button>
+      </div>
+    </form>
+  </section>
+
 
       <section class="card">
   <h4>Buscar experiencias</h4>
@@ -187,7 +181,7 @@
           </div>
         </div>
       </div>
-
+      </div>
     </aside>
   </main>
   <footer class="footer">
