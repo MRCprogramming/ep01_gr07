@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro - Viajes Inolvidables</title>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+  <header class="header small">
+    <div class="logo">✈️ Viajes Inolvidables</div>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="index.html#experiencias">Experiencias</a>
+      <a href="index.html#foro">Foro</a>
+      <a href="index.html#contacto">Contacto</a>
+      <a href="registro.html" aria-current="page">Registro</a>
+    </nav>
+  </header>
+
+  <main class="centered">
+    <section class="card form-card">
+      <h2>Registro de nuevo usuario</h2>
+
+      <form class="reg-form" onsubmit="return false;">
+        <label>Nombre
+          <input type="text" name="nombre" required>
+        </label>
+
+        <label>Apellidos
+          <input type="text" name="apellidos" required>
+        </label>
+
+        <label>Correo electrónico
+          <input type="email" name="email" required>
+        </label>
+
+        <label>Confirmar correo electrónico
+          <input type="email" name="emailconf" required>
+        </label>
+
+        <label>Fecha de nacimiento
+          <input type="date" name="fechanac" required>
+        </label>
+
+        <label>Usuario (login)
+          <input type="text" name="login" required>
+        </label>
+
+        <label>Contraseña
+          <input type="password" name="password" minlength="6" required>
+        </label>
+
+        <label>Subir imagen de perfil
+          <input type="file" name="avatar" accept="image/*">
+        </label>
+
+        <label class="policy">
+          <input type="checkbox" required> Acepto la <a href="#">política de privacidad</a>
+        </label>
+
+        <div class="row">
+          <a class="btn" href="logged.html" >Guardar datos y acceder</a>
+          <a class="btn outline" href="index.html">Cancelar</a>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Viajes Inolvidables · <a href="#">Política de privacidad</a></p>
+  </footer>
+
+</body>
+</html>
