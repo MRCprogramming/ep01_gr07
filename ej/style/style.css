@@ -266,6 +266,7 @@ body {
   top: 50%;
   left: 10px;
   border: none;
+  cursor: pointer;
 }
 
 .btn-right {
@@ -279,10 +280,13 @@ body {
   top: 50%;
   right: 10px;
   border: none;
+  cursor: pointer;
 }
 
 .btn.small { padding: 6px 8px; font-size: 13px; }
 .btn:hover { background: #003366; }
+.btn-left:hover { background: #003366; }
+.btn-right:hover { background: #003366; }
 .btn.outline { background: transparent; border: 1px solid #004080; color: #004080; }
 
 /* FOOTER */
