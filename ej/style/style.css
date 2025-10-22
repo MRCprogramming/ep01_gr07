@@ -115,6 +115,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  padding-left: 50px;
 }
 
 /* Precio destacado */
@@ -253,6 +254,33 @@ body {
   border-radius: 4px;
   display: inline-block;
 }
+
+.btn-left {
+  background: #004080;
+  color: white;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  border: none;
+}
+
+.btn-right {
+  background: #004080;
+  color: white;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  border: none;
+}
+
 .btn.small { padding: 6px 8px; font-size: 13px; }
 .btn:hover { background: #003366; }
 .btn.outline { background: transparent; border: 1px solid #004080; color: #004080; }
