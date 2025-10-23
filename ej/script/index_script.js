@@ -32,4 +32,3 @@ document.querySelector(".btn.login").addEventListener("click", function(event){
         alert("Usuario o contraseña incorrectos");
     };
 });
-
