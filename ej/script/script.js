@@ -1,3 +1,6 @@
+
+
+
 const abc= (a) =>
 {
     alert ("no me pulses");
@@ -6,7 +9,7 @@ const abc= (a) =>
 
     alert(document.querySelector("#campo").value);
 
-};
+};             
 
 document.querySelector("#pulsable").addEventListener("click", abc);
 alert("Hola")
