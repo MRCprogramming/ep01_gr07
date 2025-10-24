@@ -1,4 +1,4 @@
-// Cada vez qiue el usuario inicie sesion, se guardaran sus datos en el almacenamiento local
+// Cada vez que el usuario inicie sesion, se guardaran sus datos en el almacenamiento local
 // Todo esto con el localStorage
 
 let Usuario = "Pepe"
