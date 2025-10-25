@@ -33,7 +33,8 @@ event.preventDefault();
     nombre: nombre.value.trim(),
     apellidos: apellidos.value.trim(),
     email: email.value.trim(),
-    login: login.value.trim()
+    login: login.value.trim(),
+    contrasena: contrasena.value.trim()
 };
     try {
     localStorage.setItem("usuarioRegistrado", JSON.stringify(usuario));
