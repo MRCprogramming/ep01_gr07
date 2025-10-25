@@ -26,11 +26,11 @@
 
       <form class="reg-form" onsubmit="return false">
         <label for="nombre">Nombre
-          <input type="text" id="nombre" name="nombre" placeholder="3 caracteres minimo" required>
+          <input type="text" id="nombre" name="nombre" placeholder="3 caracteres minimo" minlength="3" required>
         </label>
 
         <label for="apellidos">Apellidos
-          <input type="text" id="apellidos" name="apellidos" placeholder="2 cad. caracteres minimo" minlength="3">
+          <input type="text" id="apellidos" name="apellidos" placeholder="2 cad. caracteres minimo" minlength="3" required>
         </label>
 
         <label for="email">Correo electrónico
@@ -38,7 +38,7 @@
         </label>
 
         <label for="email">Confirmar correo electrónico
-          <input type="email" id="email" name="emailconf" placeholder="Confirmacion correo" required>
+          <input type="email" id="emailconf" name="emailconf" placeholder="Confirmacion correo" required>
         </label>
 
         <label for="fechanac">Fecha de nacimiento
@@ -46,11 +46,11 @@
         </label>
 
         <label for="login">Usuario (login)
-          <input type="text" id="login" name="login" placeholder="Nombre de usuario" required>
+          <input type="text" id="login" name="login" placeholder="Nombre de usuario" minlength="5" required>
         </label>
 
-        <label for="contraseña">Contraseña
-          <input type="password" id="contraseña" name="password" placeholder="Contraseña" minlength="6" required>
+        <label for="contrasena">Contraseña
+          <input type="password" id="contrasena" name="password" placeholder="Contraseña" required>
         </label>
 
         <label for="avatar">Subir imagen de perfil
@@ -62,8 +62,8 @@
         </label>
 
         <div class="row">
-          <a class="btn" href="logged.html">Guardar datos y acceder</a>
-          <a class="btn outline" href="index.html">Cancelar</a>
+          <button class="btn" type="submit" id="submitBtn" disabled>Guardar datos y acceder</button>
+          <a class="btn outline" href="index.html">Cancelar</a>        
         </div>
       </form>
     </section>
