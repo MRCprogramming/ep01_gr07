@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Registro - Viajes Inolvidables</title>
   <link rel="stylesheet" href="style/style.css">
-  <script src="script/script.js" defer></script>
+  <script src="script/registro_script.js" defer></script>
 </head>
 <body>
 
@@ -24,36 +24,36 @@
     <section class="card form-card">
       <h2>Registro de nuevo usuario</h2>
 
-      <form class="reg-form" onsubmit="return false;">
-        <label>Nombre
-          <input type="text" name="nombre" required>
+      <form class="reg-form" onsubmit="return false">
+        <label for="nombre">Nombre
+          <input type="text" id="nombre" name="nombre" placeholder="3 caracteres minimo" required>
         </label>
 
-        <label>Apellidos
-          <input type="text" name="apellidos" required>
+        <label for="apellidos">Apellidos
+          <input type="text" id="apellidos" name="apellidos" placeholder="2 cad. caracteres minimo" minlength="3">
         </label>
 
-        <label>Correo electrónico
-          <input type="email" name="email" required>
+        <label for="email">Correo electrónico
+          <input type="email" id="email" name="email" placeholder="usuario@ejemplo.com" required>
         </label>
 
-        <label>Confirmar correo electrónico
-          <input type="email" name="emailconf" required>
+        <label for="email">Confirmar correo electrónico
+          <input type="email" id="email" name="emailconf" placeholder="Confirmacion correo" required>
         </label>
 
-        <label>Fecha de nacimiento
-          <input type="date" name="fechanac" required>
+        <label for="fechanac">Fecha de nacimiento
+          <input type="date" id="fechanac" name="fechanac" required>
         </label>
 
-        <label>Usuario (login)
-          <input type="text" name="login" required>
+        <label for="login">Usuario (login)
+          <input type="text" id="login" name="login" placeholder="Nombre de usuario" required>
         </label>
 
-        <label>Contraseña
-          <input type="password" name="password" minlength="6" required>
+        <label for="contraseña">Contraseña
+          <input type="password" id="contraseña" name="password" placeholder="Contraseña" minlength="6" required>
         </label>
 
-        <label>Subir imagen de perfil
+        <label for="avatar">Subir imagen de perfil
           <input type="file" name="avatar" accept="image/*">
         </label>
 
@@ -62,7 +62,7 @@
         </label>
 
         <div class="row">
-          <a class="btn" href="logged.html" >Guardar datos y acceder</a>
+          <a class="btn" href="logged.html">Guardar datos y acceder</a>
           <a class="btn outline" href="index.html">Cancelar</a>
         </div>
       </form>
