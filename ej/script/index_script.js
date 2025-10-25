@@ -19,10 +19,16 @@ document.querySelector(".btn.login").addEventListener("click", function(event){
     let UsuarioInput = document.querySelector(".usuarioInput").value.trim();
     let ContrasenaInput = document.querySelector(".passwordInput").value.trim();
 
-    console.log(UsuarioInput);
-    console.log(ContrasenaInput);
+    // Recuperamos el json y pasamos a objeto de JS
+    const UsuarioGuardado = JSON.parse(localStorage.getItem("UsuarioRegistrado"));
+    if (!UsuarioGuardado) {
+        alert("No hay ningún usuario registrado. Por favor, regístrate primero");
+        return;
+    }
+    console.log(UsuarioGuardado.login);
+    console.log(UsuarioGuardado.contrasena);
 
-    if (UsuarioInput === localStorage.getItem("Usuario") && ContrasenaInput === localStorage.getItem("Contrasena")) {
+    if (UsuarioInput === UsuarioGuardado.login && ContrasenaInput === UsuarioGuardado.contrasena) {
         alert("Inicio de sesión exitoso");
         localStorage.setItem("Usuario", UsuarioInput);
         localStorage.setItem("Contrasena", ContrasenaInput);    

@@ -37,7 +37,7 @@ event.preventDefault();
     contrasena: contrasena.value.trim()
 };
     try {
-    localStorage.setItem("usuarioRegistrado", JSON.stringify(usuario));
+    localStorage.setItem("UsuarioRegistrado", JSON.stringify(usuario));
 }   catch (e) {
     console.warn("localStorage no disponible:", e);
 }
