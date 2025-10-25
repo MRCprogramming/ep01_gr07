@@ -30,6 +30,10 @@ body {
   display: none;
 }
 
+.slider-container {
+  position: relative;
+}
+
 /* Logo de la cabecera en todas las páginas */
 .header .logo {
   font-weight: bold;
@@ -123,6 +127,7 @@ body {
 /* Overlay oscuro encargado del rectángulo inferior */
 .panel .panel-overlay {
   width: 100%;
+  min-height: 240px;
   box-sizing: border-box;
   padding: 18px 20px;
   background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55));
