@@ -25,9 +25,9 @@ if (policyCheckbox && submitBtn) {
 form.addEventListener("submit", function (event) {
 event.preventDefault();
   
-    const ok = validarFormulario();
-    if (!ok) return;
-  
+const ok = validarFormulario();
+if (!ok) return;
+
 // Guardar datos relevantes en localStorage 
     const usuario = {
     nombre: nombre.value.trim(),
@@ -36,14 +36,28 @@ event.preventDefault();
     login: login.value.trim(),
     contrasena: contrasena.value.trim()
 };
-    try {
-    localStorage.setItem("UsuarioRegistrado", JSON.stringify(usuario));
-}   catch (e) {
-    console.warn("localStorage no disponible:", e);
-}
+try {
+    // Recuperar el array actual de usuarios (si existe)
+    const usuarios = JSON.parse(localStorage.getItem("UsuariosRegistrados")) || [];
+  
+    // Comprobar si ya existe el mismo login o email
+    const existe = usuarios.some(u => u.login === usuario.login || u.email === usuario.email);
+    if (existe) {
+      alert("Este usuario o correo ya está registrado.");
+      return;
+    }
+  
+    // Añadir el nuevo usuario al array
+    usuarios.push(usuario);
+  
+    // Guardar el array completo de nuevo
+    localStorage.setItem("UsuariosRegistrados", JSON.stringify(usuarios));
+  
     alert("Registro completado correctamente");
     window.location.href = "logged.html";
-});
+  } catch (e) {
+    console.warn("localStorage no disponible:", e);
+  };
   
 // Función de validación
 function validarFormulario() {
@@ -141,4 +155,4 @@ function validarFormulario() {
     return true;
 }
 });
-  
+});
