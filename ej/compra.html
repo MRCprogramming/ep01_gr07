@@ -32,7 +32,7 @@
       <h2 id="pack-label">Pack seleccionado</h2>
       <img id="pack-image" src="images/grecia.jpg" alt="Pack seleccionado" style="max-width:100%; border-radius:6px; margin-bottom:12px;">
       <h3 id="pack-title">Pack Grecia</h3>
-      <p id="pack-desc">Grecia es un destino de ensueño que combina historia, cultura y paisajes impresionantes. Con este pack visitarás Atenas y Santorini: explorarás ruinas antiguas, disfrutarás de la deliciosa gastronomía local y te relajarás en playas de aguas cristalinas.</p>
+      <p id="pack-desc">Grecia es un destino de ensueño que combina historia, cultura y paisajes impresionantes. Con este pack visitarás Atenas y Santorini: explorarás ruinas antiguas, disfrutarás de la deliciosa gastronomía local y te relajarás en playas de aguas cristalinas. Descubrirás la hospitalidad griega y disfrutarás de actividades como paseos en barco y excursiones culturales, y mucho más.</p>
       <div class="price" id="pack-price">€800</div>
     </section>
 
@@ -40,7 +40,7 @@
       <h2 id="pack-label">Pack seleccionado</h2>
       <img id="pack-image" src="images/china.jpg" alt="Pack seleccionado" style="max-width:100%; border-radius:6px; margin-bottom:12px;">
       <h3 id="pack-title">Pack China</h3>
-      <p id="pack-desc">China es un destino fascinante que ofrece una rica historia y cultura. Con este pack visitarás Pekín y Shanghái: explorarás la Gran Muralla, disfrutarás de la deliciosa comida callejera y te maravillarás con la modernidad de las ciudades chinas.</p>
+      <p id="pack-desc">China es un destino fascinante que ofrece una rica historia y cultura. Con este pack visitarás Pekín y Shanghái: explorarás la Gran Muralla, disfrutarás de la deliciosa comida callejera y te maravillarás con la modernidad de las ciudades chinas. Se combina con una experiencia gastronómica única y visitas a mercados locales.</p>
       <div class="price" id="pack-price">€900</div>
     </section>
 
@@ -52,11 +52,13 @@
         <input type="hidden" id="packId" name="packId" value="">
 
         <label>Nombre
-          <input type="text" style="margin-bottom: 12px;" name="cliente_nombre" required>
+          <input type="text" style="margin-bottom: 12px;" name="cliente_nombre" required
+          id ="cliente_nombre">
         </label>
 
         <label>Correo electrónico
-          <input type="email" style="margin-bottom: 12px;" name="cliente_email" required>
+          <input type="email" style="margin-bottom: 12px;" name="cliente_email" required
+          id ="cliente_email">
         </label>
 
         <label>Tipo de tarjeta
@@ -69,19 +71,23 @@
         </label>
 
         <label>Número de tarjeta
-          <input inputmode="numeric" style="margin-bottom: 16px;" maxlength="19" placeholder="1234 5678 9012 3456" required>
+          <input inputmode="numeric" style="margin-bottom: 16px;" maxlength="19" placeholder="1234 5678 9012 3456" required
+          id="tarjeta_num">
         </label>
 
         <label>Nombre del titular
-          <input type="text" style="margin-bottom: 13px;" required>
+          <input type="text" style="margin-bottom: 13px;" required
+          id="tarjeta_titular">
         </label>
 
         <label>Fecha caducidad
-          <input style="margin-bottom: 13px;" type="month" required>
+          <input style="margin-bottom: 13px;" type="month" required
+          id="tarjeta_fecha">
         </label>
 
         <label>CVV
-          <input inputmode="numeric" style="margin-bottom: 24px;" maxlength="4" required>
+          <input inputmode="numeric" style="margin-bottom: 24px;" maxlength="4" required
+          id="tarjeta_cvv">
         </label>
 
         <div class="row">
