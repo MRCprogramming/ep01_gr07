@@ -244,7 +244,7 @@ body {
 
 .card {
   background: white;
-  border: 1px solid white;
+  border: 1px solid rgb(158, 158, 158);
   border-radius: 6px;
   padding: 12px;
   padding-right: 24px;
@@ -439,7 +439,7 @@ form input[type="search"] {
 }
 
 /* Botones en formularios */
-form .row { 
+form .row {
   display:flex; 
   gap:10px; 
   margin-top:12px;

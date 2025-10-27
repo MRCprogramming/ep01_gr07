@@ -34,8 +34,10 @@ if (!ok) return;
     apellidos: apellidos.value.trim(),
     email: email.value.trim(),
     login: login.value.trim(),
-    contrasena: contrasena.value.trim()
+    contrasena: contrasena.value.trim(),
+    avatar: avatar.files[0] ? avatar.files[0].name : ""
 };
+
 try {
     // Recuperar el array actual de usuarios (si existe)
     const usuarios = JSON.parse(localStorage.getItem("UsuariosRegistrados")) || [];
