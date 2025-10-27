@@ -1,7 +1,7 @@
 const leftBtn = document.querySelector('.btn-left');
 const rightBtn = document.querySelector('.btn-right');
 let contador = 0;
-let autoSlideTimer;
+let autoSlideTimer=0;
 
 leftBtn.addEventListener('click', () => {
   contador = (contador + 2)%3;
@@ -32,6 +32,7 @@ function updateContainer(num) {
 }
 
 function iniciarAutoSlide() {
+  clearInterval(autoSlideTimer);
   // Cambio cada 3 segs
   autoSlideTimer = setInterval(() => {
     contador = (contador + 1) % 3;
@@ -39,4 +40,4 @@ function iniciarAutoSlide() {
   }, 3000);
 }
 
-iniciarAutoSlide(); // Iniciar autoslide
+iniciarAutoSlide();
