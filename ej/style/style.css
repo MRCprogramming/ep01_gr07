@@ -17,6 +17,14 @@ body {
   box-shadow:  0 4px 12px rgba(0,0,0,0.15);
 }
 
+.info-pack {
+  display: none;
+}
+
+.info-pack.visible {
+  display: block;
+}
+
 /*Carrusel*/
 .slide1 {
   display: block;
@@ -33,6 +41,18 @@ body {
 .slider-container {
   position: relative;
 }
+
+.descripcion1 {
+  display: block;
+}
+
+.descripcion2 {
+  display: none;
+}
+
+.descripcion3 {
+  display: none;
+} 
 
 /* Logo de la cabecera en todas las páginas */
 .header .logo {
