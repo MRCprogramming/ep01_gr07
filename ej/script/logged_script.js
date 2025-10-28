@@ -21,20 +21,25 @@ document.addEventListener("DOMContentLoaded", function () {
   botonCerrar.addEventListener("click", function () {
     const confirmar = confirm("¿Desea cerrar sesión?");
     if (confirmar) {
-      localStorage.removeItem("UsuarioActual");
+      localStorage.removeItem("UsuarioActivo");
       window.location.href = "index.html";
     }
   });
   const formConsejo = document.querySelector("#reg-form");
   const titulo = document.getElementById("titulo_consejo");
   const texto = document.getElementById("texto_consejo");
-  const lista = document.querySelector("lista_consejos");
+  const lista = document.querySelector("#lista_consejos");
 
   if (!formConsejo || !lista) return;
 
   // Cargar los consejos ya guardados
   function cargar_consejos(){
     return JSON.parse(localStorage.getItem("ConsejosGuardados")) || [];
+  }
+
+  // Guardar los consejos en localStorage
+  function guardar_consejos(arr) {
+    localStorage.setItem("ConsejosGuardados", JSON.stringify(arr));
   }
 
   // Función para mostrar los tres últimos consejos
@@ -56,7 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Escuchar el envío del formulario
   formConsejo.addEventListener("submit", function(event) {
     event.preventDefault();
-    lert("hola");
     const tituloVal = titulo.value.trim();
     const textoVal = texto.value.trim();
 
@@ -81,9 +85,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Añadir al principio de la lista
     const consejos = cargar_consejos();
-    consejos.push(nuevoConsejo);
+    consejos.unshift(nuevoConsejo);
+
+    // Mantiene solo los 3 últimos consejos
+    if (consejos.length > 3) consejos = consejos.slice(0, 3);
+
     // Guardar en localStorage
-    localStorage.setItem("ConsejosGuardados", JSON.stringify(consejos));
+    guardar_consejos(consejos);
 
     // Actualizar la lista 
     renderConsejos();
