@@ -38,6 +38,36 @@ if (!ok) return;
     avatar: avatar.files[0] ? avatar.files[0].name : ""
 };
 
+// Convertimos la imagen guardada en base64
+if (avatar && avatar.files && avatar.files.length > 0) {
+    const file = avatar.files[0];
+    const validExt = /\.(jpe?g|png|webp)$/i;
+  
+    if (!validExt.test(file.name)) {
+      alert("El avatar debe ser una imagen .jpg, .png o .webp");
+      avatar.focus();
+      return;
+    }
+  
+    const reader = new FileReader();
+    reader.onload = function (ev) {
+      usuario.avatar = ev.target.result; // Imagen en base64
+  
+      // Recuperar y guardar usuarios
+      const usuarios = JSON.parse(localStorage.getItem("UsuariosRegistrados")) || [];
+      usuarios.push(usuario);
+      localStorage.setItem("UsuariosRegistrados", JSON.stringify(usuarios));
+  
+      // Guardar usuario activo
+      localStorage.setItem("UsuarioActivo", JSON.stringify(usuario));
+  
+      alert("Registro completado correctamente");
+      window.location.href = "logged.html";
+    };
+    reader.readAsDataURL(file);
+    return;
+  }
+
 try {
     // Recuperar el array actual de usuarios (si existe)
     const usuarios = JSON.parse(localStorage.getItem("UsuariosRegistrados")) || [];
@@ -54,7 +84,7 @@ try {
   
     // Guardar el array completo de nuevo
     localStorage.setItem("UsuariosRegistrados", JSON.stringify(usuarios));
-  
+    localStorage.setItem("UsuarioActivo", JSON.stringify(usuario));
     alert("Registro completado correctamente");
     window.location.href = "logged.html";
   } catch (e) {
